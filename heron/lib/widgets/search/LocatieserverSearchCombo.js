@@ -199,7 +199,7 @@ Heron.widgets.search.LocatieserverSearchCombo = Ext.extend(Ext.form.ComboBox, {
 				if (this.zoom > 0) {
 					this.on("select", function(combo, record, index) {
 						this.setValue(record.data.baseText); // put the selected name in the box
-						lookupUrl = this.lookupUrl + "&fl=id,weergavenaam,centroide_rd&q=" + record.data.id;
+						lookupUrl = this.lookupUrl + "&id=" + record.data.id;
 						
 						// These variables are used in a callback function below, so they must be kept local
 						map = this.map;
