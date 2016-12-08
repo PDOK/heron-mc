@@ -93,7 +93,7 @@ Heron.widgets.search.LocatieserverSearchCombo = Ext.extend(Ext.form.ComboBox, {
 
 			/** api: config[listWidth]
 			 *  See http://www.dev.sencha.com/deploy/dev/docs/source/Combo.html#cfg-Ext.form.ComboBox-listWidth,
-			 *  default value is 350.
+			 *  default value is 400.
 			 */
 			listWidth: 400,
 
@@ -120,9 +120,9 @@ Heron.widgets.search.LocatieserverSearchCombo = Ext.extend(Ext.form.ComboBox, {
 
 			/** api: config[minChars]
 			 *  ``Number`` Minimum number of characters to be typed before
-			 *  search occurs, defaults to 1.
+			 *  search occurs, defaults to 2.
 			 */
-			minChars: 4,
+			minChars: 2,
 
 			/** api: config[queryDelay]
 			 *  ``Number`` Delay before the search occurs, defaults to 200 ms.
@@ -130,23 +130,20 @@ Heron.widgets.search.LocatieserverSearchCombo = Ext.extend(Ext.form.ComboBox, {
 			queryDelay: 200,
 
 			/** api: config[maxRows]
-			 *  `String` The maximum number of rows in the responses, defaults to 20,
-			 *  maximum allowed value is 1000.
-			 *  See: http://www.geonames.org/export/geonames-search.html
+			 *  `String` The maximum number of rows in the responses, defaults to 10,
+			 *  no maximum value.
 			 */
 			maxRows: '10',
 
 			/** config: property[url]
-			 *  Url of the Geozet service default: http://geodata.nationaalgeoregister.nl/geocoder/Geocoder
-			 *  e.g.  http://geodata.nationaalgeoregister.nl/geocoder/Geocoder?zoekterm=Den,Helder,Schapendijkje&max=5
-			 *  You must be IP-whitelisted and have a proxy defined to pass through to the domain like `open.mapquestapi.com`
+			 *  URL of the Locatieserver suggest service.
 			 */
-			url: 'http://geodata.nationaalgeoregister.nl/geocoder/geosearch/suggest?wt=xml', // TODO: doesn't exist; endpoint can change
+			url: 'http://geodata.nationaalgeoregister.nl/locatieserver/suggest?wt=xml',
 			
 			/** config property[lookupUrl]
 			 *  URL of the Locatieserver lookup service.
 			 */
-			lookupUrl: 'http://geodata.nationaalgeoregister.nl/geocoder/geosearch/lookup?wt=xml', // TODO: doesn't exist; endpoint can change
+			lookupUrl: 'http://geodata.nationaalgeoregister.nl/locatieserver/lookup?wt=xml',
 
 			/** private: property[hideTrigger]
 			 *  Hide trigger of the combo.
