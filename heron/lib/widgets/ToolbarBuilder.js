@@ -310,7 +310,7 @@ Heron.widgets.ToolbarBuilder.defs = {
             iconCls: "icon-hand",
             enableToggle: true,
             pressed: true,
-            control: new OpenLayers.Control.Navigation(),
+            control: new OpenLayers.Control.Navigation({zoomWheelEnabled: false}),
             id: "pan",
             toggleGroup: "toolGroup"
         },
